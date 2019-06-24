@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+select {
+     color:grey;
+}
+
+option {
+    color:black;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+//depending on the version of jQuery .on may be replaced with .live
+        $("#cat").on('change',function(){
+            //alert($("#cat").val());
+            if( $("#cat").val() == "default" ) {
+                $("#cat").css("color","#868990");
+            } else {
+                $("#cat").css("color","black");
+            }
+        });
+});
+</script>
+
+</head>
+<body>
+
+<select id="cat" >
+    <option value="default" >Choose a Category</option>
+    <option value="NewGoods">New Goods</option>
+    <option value="UsedGoods">Used Goods</option>
+    <option value="Services">Services</option>
+    <option value="Jobs" >Jobs</option>
+    <option value="Food" >Food & Beverage</option>
+    <option value="Holiday" >Holiday Accomodation</option>
+    <option value="Automotive" >Automotive</option>
+    <option value="Property" >Property</option>
+    <option value="Events" >Events</option>
+    <option value="Personals" >Personals</option>
+</select>
+
+
+</body>
+</html>
